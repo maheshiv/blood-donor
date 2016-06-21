@@ -1,0 +1,20 @@
+Technologies Used For this Application
+1. EmberJS,
+2. Bootstrap,
+3. Google Map
+4. Mongodb,
+5. Ember-cli,
+6. ExpressJS,
+7. BABEL,
+8. Socket.IO
+9. SASS
+
+APIS
+POST /bloodDonors
+PUT /bloodDonors/:id
+GET /bloodDonors/:id
+GET /bloodDonors
+
+>> Used data persistence library ember-data
+>> Followed REST Architecture
+>> Used Babel transpiler to convert ES6 to ES5

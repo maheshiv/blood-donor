@@ -1,0 +1,17 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+@import 'font-awesome';
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+#my-map {
+  width: 100%;
+  height: 48em;
+  .g-map-canvas, .g-map {
+    width: inherit;
+    height: inherit;
+  }
+}
+.hide-more {
+  display: none;
+}

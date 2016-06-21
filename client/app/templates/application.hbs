@@ -1,0 +1,20 @@
+{{#if alertMessage}}
+  <div class="alert alert-success fade in" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{{alertMessage}}}
+  </div>
+{{/if}}
+<section class="container-fluid">
+  <header>
+    <ul class="nav nav-pills nav-justified">
+      <li class="{{if isDonor 'active'}}"> {{#link-to 'donors'}}Blood Donor{{/link-to}} </li>
+      <li class="{{if isRecepient 'active'}}"> {{#link-to 'recepients'}}Blood Recepient{{/link-to}} </li>
+    </ul>
+  </header>
+  <div>
+    {{outlet}}
+  </div>
+  <footer>
+
+  </footer>
+</section>

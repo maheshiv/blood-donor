@@ -1,0 +1,14 @@
+{{google-map}}
+{{#if showModal}}
+  {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
+    {{#em-form model=bloodDonorModel action="saveDonor"}}
+      {{em-input property="firstName" placeholder="Enter first name..."}}
+      {{em-input property="lastName" placeholder="Enter last name..."}}
+      {{em-input property="email" placeholder="Enter email..."}}
+      {{em-input property="phoneNumber" placeholder="Enter phone number"}}
+      {{em-input property="bloodGroup" placeholder="Enter blood group..."}}
+      {{em-input property="address" placeholder="Enter address..."}}
+    {{/em-form}}
+  {{/modal-dialog}}
+{{/if}}
+{{yield}}
