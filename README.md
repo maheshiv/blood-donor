@@ -2,6 +2,7 @@ This is sample project to demonstrate es6 in emberJS and expressJS.
 
 Here are the steps to setup the project,
 >> Clone the project
+>> Create blood-donor db in mongodb and run the mongo client using `mongod`, for more reference check mongodb site
 >> Open two tabs in the Command line
 >> In one tab, goto root of the folder, run `npm install` (to install dependent node modules) and then run `npm start`
 >> In another tab, goto client folder and run `npm install && bower install`(to install node and bower modules) and then run `npm start`
