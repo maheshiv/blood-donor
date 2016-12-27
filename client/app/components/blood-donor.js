@@ -1,11 +1,11 @@
 import Ember from 'ember';
-
-export default Ember.Component.extend({
-  store: Ember.inject.service(),
-  mapService: Ember.inject.service('map'),
-  initializeModal: Ember.on('init', function() {
-    Ember.set(this, 'bloodDonorModel', this.get('store').createRecord('blood-donor', {}));
-    Ember.$.getJSON('//api.ipify.org?format=jsonp&callback=?', Ember.run.bind(this, function(data) {
+const { Component, inject, on, set, run, $ } = Ember;
+export default Component.extend({
+  store: inject.service(),
+  mapService: inject.service('map'),
+  initializeModal: on('init', function() {
+    set(this, 'bloodDonorModel', this.get('store').createRecord('blood-donor', {}));
+    $.getJSON('//api.ipify.org?format=jsonp&callback=?', run.bind(this, function(data) {
       console.log('ip', data);
       this.set('userIP', data.ip);
     }));

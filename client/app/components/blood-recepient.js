@@ -1,25 +1,25 @@
 import Ember from 'ember';
 import ENV from '../config/environment';
+const { Component, inject } = Ember;
 
-export default Ember.Component.extend({
-  socketIOService: Ember.inject.service('socket-io'),
-  mapService: Ember.inject.service('map'),
-  store: Ember.inject.service(),
+export default Component.extend({
+  mapService: inject.service('map'),
+  store: inject.service(),
   featureLyr: null,
   willRender() {
-    const socket = this.get('socketIOService').socketFor(ENV.APP.DOMAIN);
+    const socket = io(ENV.APP.DOMAIN);
     socket.on('create', this.onCreate, this);
     socket.on('update', this.onUpdate, this);
     socket.on('delete', this.onDelete, this);
   },
-  mapFeatureSource(data) {
-
-  },
+  // mapFeatureSource(data) {
+  //
+  // },
   onCreate(data) {
     let store = this.get('store');
     store.push(store.normalize('blood-donor', data.bloodDonors));
     //To update model
-    let modalData = store.peekRecord('blood-donor', data.bloodDonors.id);
+    store.peekRecord('blood-donor', data.bloodDonors.id);
   },
 
   onUpdate(data) {
@@ -40,11 +40,10 @@ export default Ember.Component.extend({
   },
 
   willDestroyElement() {
-    const socket = this.get('socketIOService').socketFor(ENV.APP.DOMAIN);
+    const socket = io(ENV.APP.DOMAIN);
     socket.off('create', this.onCreate);
     socket.off('update', this.onUpdate);
     socket.off('delete', this.onDelete);
-    
   },
 
   actions: {

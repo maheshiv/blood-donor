@@ -2,7 +2,7 @@ import Ember from 'ember';
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
 import EmberValidations from 'ember-validations';
-import ENV from '../config/environment';
+// import ENV from '../config/environment';
 
 let BloodDonor = Model.extend(EmberValidations, {
   firstName: attr('string'),

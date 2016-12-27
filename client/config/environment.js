@@ -10,6 +10,9 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        Date: false
       }
     },
     APP: {
@@ -23,6 +26,10 @@ module.exports = function(environment) {
     'g-map': {
       libraries: ['places', 'geometry'],
       key: 'AIzaSyB4kOKmq7EwvB3Tt-RqObP3tT6eB28S7zw'
+    },
+    moment: {
+      allowEmpty: true,
+      includeTimezone: 'all'
     }
   };
 

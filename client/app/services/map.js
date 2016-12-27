@@ -1,13 +1,13 @@
 import Ember from 'ember';
+const { Service, on } = Ember;
 
-export default Ember.Service.extend({
+export default Service.extend({
   map: null,
   view: null,
-  initializeMap: Ember.on('init', function() {
+  initializeMap: on('init', function() {
 
-
-  }),
-  loadView: function(element) {
-
-  }
+  })
+  // loadView: function(element) {
+  //
+  // }
 });

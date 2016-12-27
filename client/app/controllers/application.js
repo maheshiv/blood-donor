@@ -1,13 +1,20 @@
 import Ember from 'ember';
-import ENV from '../config/environment';
+// import ENV from '../config/environment';
+const { Controller, computed, inject } = Ember;
 
-export default Ember.Controller.extend({
+export default Controller.extend({
+  session: inject.service('session'),
   alertMessage: '',
-  isRecepient: Ember.computed('currentRouteName', function() {
+  isRecepient: computed('currentRouteName', function() {
     return this.get('currentRouteName') === 'recepients';
   }),
-  isDonor: Ember.computed('currentRouteName', function() {
+  isDonor: computed('currentRouteName', function() {
     return this.get('currentRouteName') === 'donors';
   }),
-  location: {}
+  location: {},
+  actions: {
+    invalidateSession() {
+      this.get('session').invalidate();
+    }
+  }
 });

@@ -4,7 +4,14 @@
     {{{alertMessage}}}
   </div>
 {{/if}}
-<section class="container-fluid">
+<div>
+  {{#if session.isAuthenticated}}
+    <a {{action 'invalidateSession'}}>Logout</a>
+  {{else}}
+    <a>Login</a>
+  {{/if}}
+</div>
+<section class="container-fluid {{media.classNames}}">
   <header>
     <ul class="nav nav-pills nav-justified">
       <li class="{{if isDonor 'active'}}"> {{#link-to 'donors'}}Blood Donor{{/link-to}} </li>
@@ -12,7 +19,7 @@
     </ul>
   </header>
   <div>
-    {{outlet}}
+    {{liquid-outlet}}
   </div>
   <footer>
 

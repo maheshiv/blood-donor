@@ -17,27 +17,15 @@ Here are the steps to setup the project,
 Have to do
 >> Map blood donor recipient in Google map
 
->> Ember Suave (to follow style)
-
->> ember-responsive
-
->> ember material design
-
 >> Stripe Integration
 
 >> Docker
 
->> Moment date
-
->> Ember Ajax
-
->> Liquid fire
-
->> OAuth2
-
->> VideoJS
-
 >> Videochat using webrtc
+
+>> OAUTH2 Implementation
+
+>> Add JSON API to both front-end and backend
 
 >> Add gruntJS/gulpJS for lib folder
 

@@ -8,6 +8,7 @@
     "bootstrap-sass": "~3.3.6",
     "fontawesome": "~4.6.3",
     "urijs": "uri.js#^1.18.1",
-    "socket.io-client": "^1.4.6"
+    "socket.io-client": "^1.7.2",
+    "video.js": "~5.12"
   }
 }
