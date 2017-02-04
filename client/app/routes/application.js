@@ -1,10 +1,10 @@
 import Ember from 'ember';
-import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
+// import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 import ENV from '../config/environment';
 
 const { Route, RSVP, on } = Ember;
 
-export default Route.extend(ApplicationRouteMixin, {
+export default Route.extend(/*ApplicationRouteMixin,*/ {
   beforeModel() {
     let app = this.controllerFor('application');
     if (app && !app.get('location').longitude) {

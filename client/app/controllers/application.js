@@ -13,8 +13,8 @@ export default Controller.extend({
   }),
   location: {},
   actions: {
-    invalidateSession() {
+    /*invalidateSession() {
       this.get('session').invalidate();
-    }
+    }*/
   }
 });
